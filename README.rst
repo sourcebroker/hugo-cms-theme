@@ -123,3 +123,5 @@ TO DO
 - Make separate helper template for showing content elements from column. Right now we repeat it in /section. Not cool.
 - Make support for start time to show content end time to stop showing content.
 - Make support for ext:gridelements.
+- For translation the url translation is done with "url" option. For example "url: de/kontakt". This should support
+  translation with "slug" option to overwrite only part of path.
