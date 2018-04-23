@@ -1,0 +1,19 @@
+{{ define "faq1" }}
+{{ with $.Scratch.Get "ce_data" }}
+<div class="m-faq1">
+    <div class="m-list-separate m-list-separate--keep-bottom-sep">
+        <ul class="m-list-separate__list">
+            {{ range .questions }}
+            <li class="m-list-separate__list-item m-list-separate__list-item--space">
+                <h4 class="subtitle small-bmargin">{{ .question | safeHTML}}</h4>
+                <p>
+                    {{ .answer | safeHTML }}
+                </p>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}
+{{ end }}
+{{ partial "content-section" . }}

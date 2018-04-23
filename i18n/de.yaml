@@ -1,0 +1,11 @@
+- id: readMore
+  translation: "Weiterlesen →"
+
+- id: language
+  translation: "Sprache"
+
+- id: languageMenuDe
+  translation: "Deutsch"
+
+- id: languageMenuEn
+  translation: "Englisch"

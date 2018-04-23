@@ -1,0 +1,10 @@
+type: text
+
+section_classes:
+
+title: What is it?
+
+title_layout:
+
+text: >-
+          <p>This is proof of concept for having HUGO working with TYPO3 as backend.</p>

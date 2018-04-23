@@ -1,0 +1,20 @@
+---
+languageCode: en-us
+title: Hugo prepared for TYPO3 as backend
+
+defaultContentLanguage: en
+enableMissingTranslationPlaceholders: false
+
+disableKinds:
+ - taxonomy
+ - taxonomyTerm
+
+languages:
+  en:
+    languageName: English
+  de:
+    languageName: German
+
+params:
+  debug: 0
+---

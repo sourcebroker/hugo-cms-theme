@@ -1,0 +1,32 @@
+type: faq2
+
+section_classes: padding-right xs-hidden
+
+title: Häufig gestellte Fragen (typ 2)
+title_sub: Häufig gestellte Fragen
+
+questions:
+  - question: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit 1.'
+    answer: >-
+      Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing</a>
+      elit. Alias cumque earum facilis fugiat illo impedit in maxime minima,
+      nisi quod. Beatae iure qui veritatis voluptate! Aliquam atque modi quae
+      totam.
+  - question: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit 2.'
+    answer: >-
+      Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing</a>
+      elit. Alias cumque earum facilis fugiat illo impedit in maxime minima,
+      nisi quod. Beatae iure qui veritatis voluptate! Aliquam atque modi quae
+      totam.
+  - question: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit 3.'
+    answer: >-
+      Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing</a>
+      elit. Alias cumque earum facilis fugiat illo impedit in maxime minima,
+      nisi quod. Beatae iure qui veritatis voluptate! Aliquam atque modi quae
+      totam.
+  - question: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit 4.'
+    answer: >-
+      Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing</a>
+      elit. Alias cumque earum facilis fugiat illo impedit in maxime minima,
+      nisi quod. Beatae iure qui veritatis voluptate! Aliquam atque modi quae
+      totam.

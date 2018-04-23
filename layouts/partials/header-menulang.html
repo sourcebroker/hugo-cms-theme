@@ -1,0 +1,20 @@
+ <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ i18n (printf "languageMenu%s" (humanize $.Lang)) }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {{ $siteLanguages := .Site.Languages}}
+            {{ $pageLang := .Page.Lang}}
+            {{ range .Page.AllTranslations }}
+                {{ $translation := .}}
+                {{ range $siteLanguages }}
+                    {{ if eq $translation.Lang .Lang }}
+                        <a class="dropdown-item{{ if eq $pageLang .Lang}} active{{ end}}" href="{{ $translation.URL }}">{{ i18n (printf "languageMenu%s" (humanize .)) }}</a>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+    </li>
+</ul>

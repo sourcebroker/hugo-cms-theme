@@ -1,0 +1,19 @@
+{{ $title_layout := default 1 .title_layout }}
+
+{{ if eq $title_layout 1 }}
+    {{ if .title }} <h1 class="m-section__title {{ if .classes_header }} {{ .classes_header }} {{ end }}">{{ .title }}</h1>{{ end }}
+    {{ if .title_sub }}<h4 class="subtitle">{{ .title_sub }}</h4>{{ end }}
+{{ end }}
+
+{{ if eq $title_layout 2 }}
+    {{ if .title }} <h2 class="m-section__title {{ if .classes_header }} {{ .classes_header }} {{ end }}">{{ .title }}</h2>{{ end }}
+    {{ if .title_sub }}<h5 class="subtitle">{{ .title_sub }}</h5>{{ end }}
+{{ end }}
+
+{{ if eq $title_layout 3 }}
+    {{ if .title }} <h3 class="m-section__title {{ if .classes_header }} {{ .classes_header }} {{ end }}">{{ .title }}</h3>{{ end }}
+    {{ if .title_sub }}<h5 class="subtitle">{{ .title_sub }}</h5>{{ end }}
+{{ end }}
+
+
+
