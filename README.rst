@@ -6,8 +6,44 @@ hugo-typo3
 What does it do?
 ----------------
 
-This is proof of concept for having HUGO working with TYPO3 as backend.
+This is proof of concept for having HUGO working with TYPO3 as backend. That means no fronted possibilities of TYPO3 will
+be used except maybe JSON API.
 
+This is only HUGO theme. There will be separate project, done as TYPO3 extension, which will allow to export data from
+TYPO3 to be used by this HUGO theme.
+
+Why someone would need that ?
+-----------------------------
+
+Several reason:
+
+- **Less time to implement**
+
+  Today "well done" clickdummies are almost working websites. For small websites the time needed to implement clickdummy
+  into TYPO3 can be huge compared to gains (which sometimes is simple editing only). Therefore one can consider to use
+  TYPO3 as backend only for editing content. This content then will be written to files used by HUGO to generate website.
+  If for some reason the website will go complicated in future and HUGO will be not able to handle that case then there
+  is always fallback to implement frontend rendering in TYPO3.
+
+- **Security**
+
+  HUGO serves only static pages and if there will be no JSON API server by TYPO3 then TYPO3 can be fully hidden
+  and accessed only by dedicated IP.
+
+- **Speed**
+
+  Compare following. Hugo can render 1000 pages in 1 seconds and they are static - means no more pressure on
+  server and extremely fast TTFB (30-60ms). TYPO3 average is like render 0,5 to 4 pages in 1 second. Then they are in cache
+  and served with average TTFB 120ms-200ms. One can argue that there is ext:nc_staticfilecache which can serve TYPO3 generated
+  pages as static html. This is true but first those pages must be rendered by TYPO3 with average like 0,5 to 4 pages in
+  1 second. Imagine now you have TYPO3 website with 10.000 pages and you must clear cache often for whatever reason...
+
+- **Clickdummy pattern**
+
+  Sometimes its hard to explain to external frontend developers what means to build clickdummy the
+  "TYPO3 way" so with well-thought-out layouts and content elements which share common classes for modification.
+  This clickdummy reflects the logic behind TYPO3 layouts and content elements and its much harder for frontend developer
+  that does not know YPO3 to prepare clickdummy that will be then extremely difficult to implement into TYPO3.
 
 Installation
 ------------
