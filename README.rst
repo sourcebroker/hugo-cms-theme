@@ -15,7 +15,7 @@ TYPO3 to be used by this HUGO theme.
 Why someone would need that ?
 -----------------------------
 
-Several reason:
+Several reasons:
 
 - **Less time to implement**
 
@@ -43,7 +43,7 @@ Several reason:
   Sometimes its hard to explain to external frontend developers what means to build clickdummy the
   "TYPO3 way" so with well-thought-out layouts and content elements which share common classes for modification.
   This clickdummy reflects the logic behind TYPO3 layouts and content elements and its much harder for frontend developer
-  that does not know YPO3 to prepare clickdummy that will be then extremely difficult to implement into TYPO3.
+  that does not know TYPO3 to prepare clickdummy that will be then extremely difficult to implement into TYPO3.
 
 Installation
 ------------
@@ -124,4 +124,4 @@ TO DO
 - Support for images.
 - Make separate template for showing content elements from column. Right now we repeat it in /section. Not cool at all.
 - Make support for start time to show content/ end time to stop showing content.
-- Make support for ext:gridelements
+- Make support for ext:gridelements.
