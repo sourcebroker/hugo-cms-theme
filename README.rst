@@ -51,14 +51,12 @@ Installation
 1) Install package with composer:
    ::
 
-      composer require sourcebroker/hugo-typo3
-
+      git clone https://github.com/sourcebroker/hugo-typo3.git
 
 2) Run:
    ::
 
       hugo server
-
 
 What is working already?
 -------------------------
