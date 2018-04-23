@@ -6,12 +6,12 @@ url: de/kontakt
 menu:
   main:
   
-col_main: 
+col_0: 
   - 10
   - 11
   - 20
   
-col_right: 
+col_1: 
   - 20
   - 10
 ---
