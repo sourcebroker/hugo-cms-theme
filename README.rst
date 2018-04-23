@@ -57,28 +57,24 @@ For pages
 For content elements
 ++++++++++++++++++++
 
-- **Equivalent of backend_layouts**
-
-  Sections in HUGO can be use as equivalent of "backend_layouts" in TYPO3. This is working well except homepage (TODO).
-
 - **Content elements templates as partials at /partials/content-**
 
-  Templates of content elements as defined as partials. For example: layouts/partials/content-faq2.html
+  Templates of content elements as defined as partials. For example: ``/layouts/partials/content-faq2.html``
 
 - **Content elements data in /data/content**
 
-  Data to render content element are kept in /data/contant/x.yaml where x is equal to uid of content element in TYPO3.
+  Data to render content element are kept in ``/data/contant/x.yaml`` where x is equal to uid of content element in TYPO3.
   You can consider this folder as equivalent of "tt_content" table form TYPO3.
 
 - **Multilang content**
 
-  Data can be multilang. The file must then have the value of lang from url. Like "/data/content/1.yaml" is default
-  and "/data/contant/1.de.yaml" is for german language.
+  Data can be multilang. The file must then have the value of lang from url. Like ``/data/content/1.yaml`` is default
+  and ``/data/contant/1.de.yaml`` is for german language.
 
 - **Multilang content fallback**
 
   There is content fallback for multilang content. For example if page is DE and there is no file
-  "/data/contant/1.de.yaml" then content from "/data/contant/1.yaml" is taken as fallback.
+  ``/data/contant/1.de.yaml`` then content from ``/data/contant/1.yaml`` is taken as fallback.
 
 - **Content elements can be disabled/enabled**
 
