@@ -1,13 +1,13 @@
-hugo-typo3
-==========
+hugo-typo3-theme
+================
 
 .. contents:: :local:
 
 What does it do?
 ----------------
 
-This is proof of concept for having HUGO working with TYPO3 as backend. That means no fronted possibilities of TYPO3 will
-be used except maybe JSON API.
+This is proof of concept for having HUGO (gohugo.io) working with TYPO3 (typo3.org) as backend. That means no fronted
+possibilities of TYPO3 will be used except maybe JSON API.
 
 This is only HUGO theme. There will be separate project, done as TYPO3 extension, which will allow to export data from
 TYPO3 to be used by this HUGO theme.
