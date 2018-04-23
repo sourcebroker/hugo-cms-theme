@@ -80,3 +80,12 @@ For content elements
 
   There is support for enable/disable single content element. In TYPO3 there is "hidden" field for that. Here the field
   for that in data of content element is "draft" (which is analogy for "draft" from front matter of page in HUGO)
+
+
+TO DO
++++++
+
+- Support for images.
+- Make separate template for showing content elements from column. Right now we repeat it in /section. Not cool at all.
+- Make support for start time to show content/ end time to stop showing content.
+- Make support for ext:gridelements
