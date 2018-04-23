@@ -100,7 +100,7 @@ For content elements
   Data to render content element are kept in ``/data/contant/x.yaml`` where x is equal to uid of content element in TYPO3.
   You can consider this folder as equivalent of "tt_content" table form TYPO3.
 
-- **Multilang content support **
+- **Multilang content support**
 
   Data can be multilang. The file name must then have the value of lang defined in "languages" part of hugo config.
   For example ``/data/content/1.yaml`` is default language and ``/data/contant/1.de.yaml`` is for german language.
