@@ -129,6 +129,5 @@ TO DO
 +++++
 
 - Support for images.
-- Make separate helper template for showing content elements from column. Right now we repeat it in /section. Not cool.
 - Make support for start time to show content end time to stop showing content.
 - Make support for ext:gridelements.
