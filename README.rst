@@ -11,7 +11,7 @@ possibilities of TYPO3 will be used except maybe JSON API.
 
 This is only HUGO theme. If you want to test it with TYPO3 you need ext:hugo here https://github.com/sourcebroker/hugo
 
-This theme and ext:hugo are early beta do be patient with bugs!
+This theme and ext:hugo are in early beta - so be patient with bugs!
 
 Any help to improve the code appreciated.
 
@@ -26,8 +26,8 @@ Several reasons:
   Today "well done" clickdummies are almost working websites. For small websites the time needed to implement clickdummy
   into TYPO3 can be huge compared to gains (which sometimes is simple editing only). Therefore one can consider to use
   TYPO3 as backend only for editing content. This content then will be written to files used by HUGO to generate website.
-  If for some reason the website will go complicated in future and HUGO will be not able to handle that case then there
-  is always fallback to implement frontend rendering in TYPO3.
+  If for some reason the website will go complicated in future and HUGO will be not able to handle that complex case
+  then there is always fallback to implement frontend rendering in TYPO3.
 
 - **Security**
 
@@ -42,12 +42,12 @@ Several reasons:
   pages as static html. This is true but first those pages must be rendered by TYPO3 with average like 0,5 to 4 pages in
   1 second. Imagine now you have TYPO3 website with 10.000 pages and you must clear cache often for whatever reason...
 
-- **Clickdummy pattern**
+- **Content element based clickdummy pattern**
 
-  Sometimes its hard to explain to external frontend developers what means to build clickdummy the
-  "TYPO3 way" so with well-thought-out layouts and content elements which share common classes for modification.
-  This clickdummy reflects the logic behind TYPO3 layouts and content elements and its much harder for frontend developer
-  that does not know TYPO3 to prepare clickdummy that will be then extremely difficult to implement into TYPO3.
+  Sometimes its hard to explain to external frontend developers what means to build clickdummy the "TYPO3 way" so with
+  well-thought-out layouts and content elements (which share common classes for modification). This hugo based clickdummy
+  reflects the logic behind TYPO3 layouts and reusable content elements. So even if you still want to implement frontend
+  with TYPO3 this clickdummy can help you to prepare clickdummy that will be easily implemented into TYPO3.
 
 Installation
 ------------
@@ -122,8 +122,8 @@ For content elements
 NOTE
 ++++
 
-For translations of the url the "url" option in front matter is used becase slug is not working for page sections.
-Read here for explanation https://discourse.gohugo.io/t/multilingual-url-slug-is-being-ignored/10003
+For translations of the url the "url" option in front matter is used because slug is not working for page sections.
+Read here for more explanation: https://discourse.gohugo.io/t/multilingual-url-slug-is-being-ignored/10003
 
 TO DO
 +++++
