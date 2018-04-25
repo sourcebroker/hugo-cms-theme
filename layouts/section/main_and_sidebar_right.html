@@ -1,40 +1,14 @@
 {{ define "main" }}
-{{ $pipe := . }}
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            {{ range $ce_uid := .Params.col_0 }}
-                {{ $potencialLanguageIndex := printf "%s%s" $ce_uid (cond (eq $.Lang "en") "" (printf ".%s" $.Lang)) }}
-                {{ $index := cond (fileExists (printf "data/content/%s.yaml" $potencialLanguageIndex)) $potencialLanguageIndex (cond (fileExists (printf "data/content/%s.yaml" $ce_uid)) $ce_uid nil) }}
-                {{ if eq $index nil }}
-                    {{ partial "content-data-file-not-found" $ce_uid }}
-                {{ else }}
-                    {{ $ce_data := index $.Site.Data.content $index }}
-                    {{ $ce_name := (printf "content-%s" $ce_data.type) }}
-                    {{ $.Scratch.Set "ce_data" $ce_data }}
-                    {{ $.Scratch.Set "ce_name" $ce_name }}
-                    {{ $.Scratch.Set "ce_uid" $ce_uid }}
-                    {{ partial $ce_name $pipe }}
-                {{ end }}
-            {{ end }}
+            {{ $.Scratch.Set "contentColumn" 0 }}
+            {{ template "getColumnContent" . }}
         </div>
         <div class="col-md-4">
-            {{ range $ce_uid := .Params.col_1 }}
-                {{ $potencialLanguageIndex := printf "%s%s" $ce_uid (cond (eq $.Lang "en") "" (printf ".%s" $.Lang)) }}
-                {{ $index := cond (fileExists (printf "data/content/%s.yaml" $potencialLanguageIndex)) $potencialLanguageIndex (cond (fileExists (printf "data/content/%s.yaml" $ce_uid)) $ce_uid nil) }}
-                {{ if eq $index nil }}
-                    {{ partial "content-data-file-not-found" $ce_uid }}
-                {{ else }}
-                    {{ $ce_data := index $.Site.Data.content $index }}
-                    {{ $ce_name := (printf "content-%s" $ce_data.type) }}
-                    {{ $.Scratch.Set "ce_data" $ce_data }}
-                    {{ $.Scratch.Set "ce_name" $ce_name }}
-                    {{ $.Scratch.Set "ce_uid" $ce_uid }}
-                    {{ partial $ce_name $pipe }}
-                {{ end }}
-            {{ end }}
+            {{ $.Scratch.Set "contentColumn" 1 }}
+            {{ template "getColumnContent" . }}
         </div>
     </div>
 </div>
-
 {{ end }}
