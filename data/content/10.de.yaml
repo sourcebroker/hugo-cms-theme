@@ -1,6 +1,6 @@
 type: faq1
 
-section_classes: padding-right xs-hidden
+section_classes:
 
 title: Häufig gestellte Fragen
 title_sub: Untertitel hier

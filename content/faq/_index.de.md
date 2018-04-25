@@ -1,17 +1,14 @@
 ---
-title: Kontakt
+title: FAQ
 layout: main_and_sidebar_right
-url: de/kontakt
+url: de/faq
 
 menu:
   main:
   
 col_0: 
   - 10
-  - 11
-  - 20
   
 col_1: 
-  - 20
-  - 10
+  - 30
 ---

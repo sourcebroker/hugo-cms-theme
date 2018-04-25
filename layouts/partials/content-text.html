@@ -1,8 +1,6 @@
 {{ define "text" }}
-{{ with $.Scratch.Get "ce_data" }}
-
-{{ .text | safeHTML }}
-
-{{ end }}
+    {{ with $.Scratch.Get "ce_data" }}
+        {{ .text | safeHTML }}
+    {{ end }}
 {{ end }}
 {{ partial "content-section" . }}

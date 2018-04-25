@@ -5,10 +5,8 @@
         <ul class="m-list-separate__list">
             {{ range .questions }}
             <li class="m-list-separate__list-item m-list-separate__list-item--space">
-                <h4 class="subtitle small-bmargin">{{ .question | safeHTML}}</h4>
-                <p>
-                    {{ .answer | safeHTML }}
-                </p>
+                <h4 class="subtitle small-bmargin">{{ .question}}</h4>
+                {{ .answer | safeHTML}}
             </li>
             {{ end }}
         </ul>
