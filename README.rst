@@ -119,6 +119,11 @@ For content elements
   There is support for enable/disable single content element. In TYPO3 there is "hidden" field for that. Here the field
   for that in data of content element is "draft" (which is analogy for "draft" from front matter of page in HUGO)
 
+NOTE
+++++
+
+For translations of the url the "url" option in front matter is used becase slug is not working for page sections.
+Read here for explanation https://discourse.gohugo.io/t/multilingual-url-slug-is-being-ignored/10003
 
 TO DO
 +++++
@@ -127,5 +132,3 @@ TO DO
 - Make separate helper template for showing content elements from column. Right now we repeat it in /section. Not cool.
 - Make support for start time to show content end time to stop showing content.
 - Make support for ext:gridelements.
-- For translation the url translation is done with "url" option. For example "url: de/kontakt". This should support
-  translation with "slug" option to overwrite only part of path.
