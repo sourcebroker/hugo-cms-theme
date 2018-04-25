@@ -4,6 +4,10 @@ Changelog
 
 dev-master
 ~~~~~~~~~~
+... ...
+
+0.0.2
+~~~~~
 
 1) [BUGFIX] Fix wrong/old naming of content columns.
 2) [DOCS] Docs fixes.
