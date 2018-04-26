@@ -5,10 +5,10 @@
             {{ i18n (printf "languageMenu%s" (humanize $.Lang)) }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            {{ $siteLanguages := .Site.Languages}}
-            {{ $pageLang := .Page.Lang}}
+            {{ $siteLanguages := .Site.Languages }}
+            {{ $pageLang := .Page.Lang }}
             {{ range .Page.AllTranslations }}
-                {{ $translation := .}}
+                {{ $translation := . }}
                 {{ range $siteLanguages }}
                     {{ if eq $translation.Lang .Lang }}
                         <a class="dropdown-item{{ if eq $pageLang .Lang}} active{{ end}}" href="{{ $translation.URL }}">{{ i18n (printf "languageMenu%s" (humanize .)) }}</a>
