@@ -5,6 +5,7 @@ Changelog
 dev-master
 ~~~~~~~~~~
 1) [TASK] Make homepage to read layouts from content files.
+2) [BUGFIX] Fix wrong path on content.
 
 0.0.2
 ~~~~~
