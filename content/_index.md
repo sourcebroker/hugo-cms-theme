@@ -1,6 +1,6 @@
 ---
 title: Homepage
-layout: main_and_sidebar_right
+layout: main
 
 col_0:
   - 30

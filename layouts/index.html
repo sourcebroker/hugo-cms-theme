@@ -1,10 +1,1 @@
-{{ define "main" }}
-<div class="container">
-    <div class="row">
-        <div class="col">
-            {{ $.Scratch.Set "contentColumn" 0 }}
-            {{ template "getColumnContent" . }}
-        </div>
-    </div>
-</div>
-{{ end }}
+{{ .Render (printf "section/%s" .Params.layout) }}

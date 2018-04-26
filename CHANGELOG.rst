@@ -4,7 +4,7 @@ Changelog
 
 dev-master
 ~~~~~~~~~~
-... ...
+1) [TASK] Make homepage to read layouts from content files.
 
 0.0.2
 ~~~~~
