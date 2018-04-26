@@ -70,7 +70,7 @@ For pages
 
 - **Equivalent of backend_layouts**
 
-  "Sections" in HUGO can be used as equivalent of "backend_layouts" in TYPO3. This is working well except homepage (TODO).
+  "Sections" in HUGO are used as equivalent of "backend_layouts" in TYPO3.
 
 - **Content elements rendering**
 
