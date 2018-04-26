@@ -1,6 +1,6 @@
 {{ $ceData := $.Scratch.Get "ce_data" }}
 {{ $ceName := $.Scratch.Get "ce_name" }}
-<div class="section p-3 {{ $ceData.section_classes }} ">
+<div class="section p-3 {{ $ceData.section_classes }}">
     {{ partial "content-section-header" $ceData }}
 
     {{ if eq $ceName "content-text" }}
