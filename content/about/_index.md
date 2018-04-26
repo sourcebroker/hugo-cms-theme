@@ -1,6 +1,6 @@
 ---
 title: About
-layout: main
+layout: main_sidebar_right
 
 menu:
   main:

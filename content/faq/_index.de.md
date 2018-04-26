@@ -1,14 +1,14 @@
 ---
 title: FAQ
-layout: main_and_sidebar_right
+layout: main_sidebar_left
 url: de/faq
 
 menu:
   main:
   
 col_0: 
-  - 10
+  - 30
   
 col_1: 
-  - 30
+  - 10
 ---

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            {{ $.Scratch.Set "contentColumn" 0 }}
+            {{ template "getColumnContent" . }}
+        </div>
+        <div class="col-md-8">
+            {{ $.Scratch.Set "contentColumn" 1 }}
+            {{ template "getColumnContent" . }}
+        </div>
+    </div>
+</div>
+{{ end }}

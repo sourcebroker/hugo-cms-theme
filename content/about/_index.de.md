@@ -1,6 +1,6 @@
 ---
 title: Über
-layout: main_and_sidebar_right
+layout: main_sidebar_right
 url: de/ueber
 
 menu:
