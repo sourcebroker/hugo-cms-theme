@@ -2,7 +2,7 @@
 title: Homepage
 layout: main
 
-col_0:
+column0:
   - 30
   - 20
   - 40

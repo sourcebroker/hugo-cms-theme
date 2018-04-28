@@ -1,16 +1,16 @@
 type: card
 
-section_classes:
+sectionClasses:
 
 title: Card content element
-title_sub:
-title_layout: 2
+titleSub:
+titleLayout: 2
 
 draft: 0
 
-card_title: dasd
-card_text: >-
+cardTitle: dasd
+cardText: >-
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
           cumque earum facilis fugiat illo impedit in maxime minima, nisi quod.
-card_button_text: Lorem ipsum
-card_button_link: /faq
+cardButtonText: Lorem ipsum
+cardButtonLink: /faq

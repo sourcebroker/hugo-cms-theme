@@ -1,0 +1,6 @@
+{{ define "ce-text" }}
+    {{ with $.Scratch.Get "ceData" }}
+        {{ .text | safeHTML }}
+    {{ end }}
+{{ end }}
+{{ partial "ce--section" . }}

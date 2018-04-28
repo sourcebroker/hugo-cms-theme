@@ -1,7 +1,7 @@
 {{ define "getColumnContent" }}
     {{ $column := $.Scratch.Get "contentColumn" }}
     {{ $pipe := . }}
-    {{ range $ceId := index .Params (printf "col_%s" (string $column)) }}
+    {{ range $ceId := index .Params (printf "column%s" (string $column)) }}
         {{ $potencialLanguageIndex := printf "%s%s" $ceId (cond (eq $.Lang "en") "" (printf ".%s" $.Lang)) }}
         {{ $index := cond (fileExists (printf "data/content/%s.yaml" $potencialLanguageIndex)) $potencialLanguageIndex (cond (fileExists (printf "data/content/%s.yaml" $ceId)) $ceId nil) }}
         {{ if eq $index nil }}

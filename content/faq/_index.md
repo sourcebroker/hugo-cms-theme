@@ -1,13 +1,13 @@
 ---
 title: FAQ
-layout: main_sidebar_left
+layout: main-sidebar-left
 
 menu:
   main:
   
-col_0: 
+column0: 
   - 10
   
-col_1: 
+column1: 
   - 30
 ---

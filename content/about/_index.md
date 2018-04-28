@@ -1,13 +1,13 @@
 ---
 title: About
-layout: main_sidebar_right
+layout: main-sidebar-right
 
 menu:
   main:
   
-col_0: 
+column0: 
   - 40
   
-col_1: 
+column1: 
   - 30
 ---

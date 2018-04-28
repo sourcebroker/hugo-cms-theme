@@ -1,14 +1,14 @@
 ---
 title: Über
-layout: main_sidebar_right
+layout: main-sidebar-right
 url: de/ueber
 
 menu:
   main:
   
-col_0: 
+column0: 
   - 40
   
-col_1: 
+column1: 
   - 30
 ---

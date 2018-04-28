@@ -1,9 +1,9 @@
 type: faq1
 
-section_classes:
+sectionClasses:
 
 title: Frequently asked questions
-title_sub: Subtitle here
+titleSub: Subtitle here
 
 questions:
   - question: Lorem ipsum

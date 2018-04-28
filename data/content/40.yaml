@@ -1,10 +1,10 @@
 type: text
 
-section_classes:
+sectionClasses:
 
 title: Simple text content element 2
-title_sub:
-title_layout: 2
+titleSub:
+titleLayout: 2
 
 draft: 0
 text: >-

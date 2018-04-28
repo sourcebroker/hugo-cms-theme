@@ -1,16 +1,16 @@
 type: card
 
-section_classes:
+sectionClasses:
 
 title: Karteninhaltselement
-title_sub:
-title_layout: 2
+titleSub:
+titleLayout: 2
 
 draft: 0
 
-card_title: Lorem
-card_text: >-
+cardTitle: Lorem
+cardText: >-
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
           cumque earum facilis fugiat illo impedit in maxime minima, nisi quod.
-card_button_text: Lorem ipsum
-card_button_link: /de/faq
+cardButtonText: Lorem ipsum
+cardButtonLink: /de/faq

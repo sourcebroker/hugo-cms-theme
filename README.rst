@@ -83,12 +83,12 @@ For pages
     title: About us
     layout: main_and_sidebar_right
 
-    col_0:
+    column0:
       - 10
       - 31
       - 2
 
-    col_1:
+    column1:
       - 113
       - 9
 

@@ -1,0 +1,19 @@
+{{ $ceId := $.Scratch.Get "ceId" }}
+{{ $ceData := $.Scratch.Get "ceData" }}
+{{ $ceName := $.Scratch.Get "ceName" }}
+
+<div class="section ce-{{$ceId}} p-3 {{ $ceData.sectionClasses }}">
+    {{ partial "ce--section-header" $ceData }}
+
+    {{ if eq $ceName "ce-text" }}
+        {{ template "ce-text" . }}
+    {{ end }}
+
+    {{ if eq $ceName "ce-card" }}
+        {{ template "ce-card" . }}
+    {{ end }}
+
+    {{ if eq $ceName "ce-faq1" }}
+        {{ template "ce-faq1" . }}
+    {{ end }}
+</div>

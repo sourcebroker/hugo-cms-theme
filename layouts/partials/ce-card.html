@@ -1,0 +1,12 @@
+{{ define "ce-card" }}
+{{ with $.Scratch.Get "ceData" }}
+<div class="card" >
+    <div class="card-body">
+        <h5 class="card-title">{{ .cardTitle }}</h5>
+        <p class="card-text">{{ .cardText }}</p>
+        <a href="{{ .cardButtonLink }}" class="btn btn-primary">{{ .cardButtonText }}</a>
+    </div>
+</div>
+{{ end }}
+{{ end }}
+{{ partial "ce--section" . }}
