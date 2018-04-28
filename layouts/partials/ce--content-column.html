@@ -1,0 +1,18 @@
+{{ define "getColumnContent" }}
+    {{ $column := $.Scratch.Get "contentColumn" }}
+    {{ $pipe := . }}
+    {{ range $ceId := index .Params (printf "col_%s" (string $column)) }}
+        {{ $potencialLanguageIndex := printf "%s%s" $ceId (cond (eq $.Lang "en") "" (printf ".%s" $.Lang)) }}
+        {{ $index := cond (fileExists (printf "data/content/%s.yaml" $potencialLanguageIndex)) $potencialLanguageIndex (cond (fileExists (printf "data/content/%s.yaml" $ceId)) $ceId nil) }}
+        {{ if eq $index nil }}
+                {{ partial "ce--data-file-not-found" $ceId }}
+            {{ else }}
+                {{ $ceData := index $.Site.Data.content $index }}
+                {{ $ceName := (printf "ce-%s" $ceData.type) }}
+                {{ $.Scratch.Set "ceData" $ceData }}
+                {{ $.Scratch.Set "ceName" $ceName }}
+                {{ $.Scratch.Set "ceId" $ceId }}
+                {{ partial $ceName $pipe }}
+        {{ end }}
+    {{ end }}
+{{ end }}

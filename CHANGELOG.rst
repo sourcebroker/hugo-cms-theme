@@ -8,6 +8,7 @@ dev-master
 2) [BUGFIX] Fix wrong path on content.
 3) [TASK] Rename section names / add new section main_sidebar_left.
 4) [TASK] Code cleanup.
+5) [TASK] Move getColumnContent tempalte to separate file in /partial and include it in each section.
 
 0.0.2
 ~~~~~
