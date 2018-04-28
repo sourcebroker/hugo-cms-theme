@@ -2,8 +2,8 @@
 Changelog
 ---------
 
-dev-master
-~~~~~~~~~~
+0.0.3
+~~~~~
 1) [TASK] Make homepage to read layouts from content files.
 2) [BUGFIX] Fix wrong path on content.
 3) [TASK] Rename section names / add new section main_sidebar_left.
