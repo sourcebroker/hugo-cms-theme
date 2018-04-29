@@ -9,11 +9,15 @@
                     {{ partial "ce--data-file-not-found" $ceId }}
                 {{ else }}
                     {{ $ceData := index $.Site.Data.content $index }}
-                    {{ $ceName := (printf "ce-%s" $ceData.type) }}
-                    {{ $.Scratch.Set "ceData" $ceData }}
-                    {{ $.Scratch.Set "ceName" $ceName }}
-                    {{ $.Scratch.Set "ceId" $ceId }}
-                    {{ partial $ceName $pipe }}
+                    {{ $publishDate := time (default "1000-01-01T00:00:00Z" $ceData.publishDate) }}
+                    {{ $expireDate := time (default "9999-09-01T00:00:00Z" $ceData.expireDate) }}
+                    {{ if and ($publishDate.Before now) ($expireDate.After now) }}
+                        {{ $ceName := (printf "ce-%s" $ceData.type) }}
+                        {{ $.Scratch.Set "ceData" $ceData }}
+                        {{ $.Scratch.Set "ceName" $ceName }}
+                        {{ $.Scratch.Set "ceId" $ceId }}
+                        {{ partial $ceName $pipe }}
+                    {{ end }}
             {{ end }}
     {{ end }}
 {{ end }}

@@ -114,10 +114,16 @@ For content elements
   There is content fallback for multilang content. For example if lang is DE and there is no file
   ``/data/contant/1.de.yaml`` then content from ``/data/contant/1.yaml`` is taken as fallback.
 
-- **Content elements can be disabled/enabled**
+- **Content elements can be disabled/enabled (draft)**
 
   There is support for enable/disable single content element. In TYPO3 there is "hidden" field for that. Here the field
   for that in data of content element is "draft" (which is analogy for "draft" from front matter of page in HUGO)
+
+- **Content elements can be disabled/enabled according to date (publishDate, expireDate)**
+
+  There is support for enable/disable single content element according to time. In TYPO3 there is "starttime" and
+  "endtime" fields for that. Here for the analogy to existing front matter values for page the names for the fields
+  are "publishDate", "expireDate".
 
 NOTE
 ++++
@@ -129,5 +135,4 @@ TO DO
 +++++
 
 - Support for images.
-- Make support for start time to show content end time to stop showing content.
 - Make support for ext:gridelements.
