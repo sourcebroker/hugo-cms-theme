@@ -2,6 +2,10 @@
 Changelog
 ---------
 
+0.0.6
+~~~~~
+1) [FEATURE] First raw version for grid support.
+
 0.0.5
 ~~~~~
 1) [FEATURE] Support for publishDate, expireDate for content elements.

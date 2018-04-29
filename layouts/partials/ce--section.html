@@ -2,8 +2,12 @@
 {{ $ceData := $.Scratch.Get "ceData" }}
 {{ $ceName := $.Scratch.Get "ceName" }}
 
-<div class="section ce-{{$ceId}} p-3 {{ $ceData.sectionClasses }}">
+<div class="section ce-{{$ceId}} mt-0 mb-4 {{ $ceData.sectionClasses }}">
     {{ partial "ce--section-header" $ceData }}
+
+    {{ if eq $ceName "ce-grid2col" }}
+        {{ template "ce-grid2col" . }}
+    {{ end }}
 
     {{ if eq $ceName "ce-text" }}
         {{ template "ce-text" . }}

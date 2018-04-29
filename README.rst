@@ -125,6 +125,11 @@ For content elements
   "endtime" fields for that. Here for the analogy to existing front matter values for page the names for the fields
   are "publishDate", "expireDate".
 
+- **Content elements can be put into grid / columns**
+
+  There is support creating a grids of content elements. Look at ``data/content/50.yaml`` how such content element
+  looks like. So far there is only support for two columns - some refactor is needed to make it more universal.
+
 NOTE
 ++++
 
@@ -135,4 +140,3 @@ TO DO
 +++++
 
 - Support for images.
-- Make support for ext:gridelements.

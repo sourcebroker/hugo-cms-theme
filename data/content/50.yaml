@@ -1,0 +1,19 @@
+type: grid2col
+
+sectionClasses:
+
+titleLayout: 2
+
+draft: 0
+
+columns:
+  col0:
+    classes: col-md-4
+    contentElements:
+      - 30
+      - 20
+  col1:
+    classes: col-md-8
+    contentElements:
+      - 40
+      - 20
