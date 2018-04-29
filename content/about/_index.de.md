@@ -6,9 +6,9 @@ url: de/ueber
 menu:
   main:
   
-column0: 
-  - 40
-  
-column1: 
-  - 30
+columns:
+  col0: 
+    - 40
+  col1: 
+    - 30
 ---

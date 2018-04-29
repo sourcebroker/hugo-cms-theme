@@ -2,6 +2,12 @@
 Changelog
 ---------
 
+0.0.4
+~~~~~
+
+1) [TASK] Change the way ti columns data is stored. Its now assoc array instead
+   of separate arrays.
+
 0.0.3
 ~~~~~
 1) [TASK] Make homepage to read layouts from content files.

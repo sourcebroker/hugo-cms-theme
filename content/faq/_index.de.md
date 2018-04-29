@@ -5,10 +5,10 @@ url: de/faq
 
 menu:
   main:
-  
-column0: 
-  - 10
-  
-column1: 
-  - 30
+
+columns:
+  col0: 
+    - 10
+  col1: 
+    - 30
 ---
