@@ -4,7 +4,7 @@ layout: main
 
 columns:
   col0: 
-    - 30
+    - 50
     - 20
     - 40
 ---

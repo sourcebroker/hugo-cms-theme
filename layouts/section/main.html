@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            {{ $.Scratch.Set "contentColumn" "col0" }}
+            {{ $.Scratch.Set "contentElements" (index .Params.columns "col0") }}
             {{ template "getColumnContent" . }}
         </div>
     </div>

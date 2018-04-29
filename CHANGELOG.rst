@@ -2,6 +2,10 @@
 Changelog
 ---------
 
+0.0.7
+~~~~~
+1) [TASK] Refactor grid support.
+
 0.0.6
 ~~~~~
 1) [FEATURE] First raw version for grid support.

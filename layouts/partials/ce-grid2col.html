@@ -1,16 +1,16 @@
 {{ define "ce-grid2col" }}
-{{ partial "ce--content-column-grid" . }}
+{{ partial "ce--content-column" . }}
 {{ $ceData := .Scratch.Get "ceData" }}
     <div class="row">
         {{ $col0Classess := default "col-md-6" $ceData.columns.col0.classes }}
         <div class="{{ $col0Classess }}">
-            {{ .Scratch.SetInMap "ceData" "column" "col0" }}
-            {{ template "getColumnContentGrid" . }}
+            {{ $.Scratch.Set "contentElements" (index $ceData.columns "col0").contentElements }}
+            {{ template "getColumnContent" . }}
         </div>
         {{ $col1Classess := default "col-md-6" $ceData.columns.col1.classes }}
         <div class="{{ $col1Classess }}">
-            {{ .Scratch.SetInMap "ceData" "column" "col1" }}
-            {{ template "getColumnContentGrid" . }}
+            {{ $.Scratch.Set "contentElements" (index $ceData.columns "col1").contentElements }}
+            {{ template "getColumnContent" . }}
         </div>
     </div>
 {{ end }}

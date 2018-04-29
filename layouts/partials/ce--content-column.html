@@ -1,7 +1,6 @@
 {{ define "getColumnContent" }}
-    {{ $column := $.Scratch.Get "contentColumn" }}
     {{ $pipe := . }}
-    {{ range (index .Params.columns (string $column)) }}
+    {{ range $.Scratch.Get "contentElements" }}
             {{ $ceId := string . }}
             {{ $potencialLanguageIndex := printf "%s%s" $ceId (cond (eq $.Lang "en") "" (printf ".%s" $.Lang)) }}
             {{ $index := cond (fileExists (printf "data/content/%s.yaml" $potencialLanguageIndex)) $potencialLanguageIndex (cond (fileExists (printf "data/content/%s.yaml" $ceId)) $ceId nil) }}
@@ -12,11 +11,23 @@
                     {{ $publishDate := time (default "1000-01-01T00:00:00Z" $ceData.publishDate) }}
                     {{ $expireDate := time (default "9999-09-01T00:00:00Z" $ceData.expireDate) }}
                     {{ if and ($publishDate.Before now) ($expireDate.After now) }}
+
+                        {{ $ceDataTmp := $.Scratch.Get "ceData" }}
+                        {{ $ceNameTmp := $.Scratch.Get "ceName" }}
+                        {{ $ceIdTmp := $.Scratch.Get "ceId" }}
+                        {{ $contentElementsTmp := $.Scratch.Get "contentElements" }}
+
                         {{ $ceName := (printf "ce-%s" $ceData.type) }}
                         {{ $.Scratch.Set "ceData" $ceData }}
                         {{ $.Scratch.Set "ceName" $ceName }}
                         {{ $.Scratch.Set "ceId" $ceId }}
+
                         {{ partial $ceName $pipe }}
+
+                        {{ $.Scratch.Set "ceData" $ceDataTmp }}
+                        {{ $.Scratch.Set "ceName" $ceNameTmp }}
+                        {{ $.Scratch.Set "ceId" $ceIdTmp }}
+                        {{ $.Scratch.Set "contentElements" $contentElementsTmp }}
                     {{ end }}
             {{ end }}
     {{ end }}
