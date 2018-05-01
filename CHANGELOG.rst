@@ -2,6 +2,10 @@
 Changelog
 ---------
 
+dev-master
+~~~~~~~~~~
+1) [TASK] Remove inclusion of partial as all partials are anyway read at start of hugo.
+
 0.0.7
 ~~~~~
 1) [TASK] Refactor grid support.

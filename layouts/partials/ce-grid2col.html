@@ -1,6 +1,7 @@
 {{ define "ce-grid2col" }}
-{{ partial "ce--content-column" . }}
-{{ $ceData := .Scratch.Get "ceData" }}
+
+    {{ $ceData := .Scratch.Get "ceData" }}
+
     <div class="row">
         {{ $col0Classess := default "col-md-6" $ceData.columns.col0.classes }}
         <div class="{{ $col0Classess }}">
@@ -13,5 +14,6 @@
             {{ template "getColumnContent" . }}
         </div>
     </div>
+
 {{ end }}
 {{ partial "ce--section" . }}
