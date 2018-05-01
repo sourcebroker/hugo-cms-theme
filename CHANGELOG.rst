@@ -2,6 +2,10 @@
 Changelog
 ---------
 
+0.0.9
+~~~~~
+1) [DOC] Add docs about media management.
+
 0.0.8
 ~~~~~
 1) [TASK] Remove inclusion of partial as all partials are anyway read at start of hugo.

@@ -130,13 +130,36 @@ For content elements
   There is support creating a grids of content elements. Look at ``data/content/50.yaml`` how such content element
   looks like. So far there is only support for two columns - some refactor is needed to make it more universal.
 
+- **Global media storage**
+
+  Every CMS has now some kind of media management module. Here it is reflected in folder ``/content/_media/``. You can
+  define as much separate storages as needed placing them for example in ``/content/_media/storage01``,
+  ``/content/_media/storage01``, etc. Each file from CMS storage must be reflected in ``content/_media/index.md``
+  and have following structure.
+
+   ::
+
+    ---
+    resources:
+      - src: "storage01/sunsets/sunset.jpg"
+        name: "445"
+        title: "Sunset"
+        params:
+          alt: "Sunset on sea"
+      - src: "storage01/image-1.png"
+        name: "441"
+        title: "Hugo banner"
+        params:
+          alt: "Hugo banner"
+    ---
+
+   The "name" should be some identifier (id) of media resource from CMS. In content element file the media file then
+   must be reflected by this identifier. Look for example in ``data/content/20.yaml`` and example of media file usage and
+   resizing in ``layouts/partials/ce-card.html``.
+
+
 NOTE
 ++++
 
 For translations of the url the "url" option in front matter is used because slug is not working for page sections.
 Read here for more explanation: https://discourse.gohugo.io/t/multilingual-url-slug-is-being-ignored/10003
-
-TO DO
-+++++
-
-- Support for images.
