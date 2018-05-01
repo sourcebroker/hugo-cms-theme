@@ -1,55 +1,61 @@
 {{ $titleLayout := default 1 .titleLayout }}
 
 {{ if eq $titleLayout 1 }}
-{{ if .title }}
-<h1 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}<br>{{ end }}
-    {{ if .titleSub }}
-    <small class="m-section__subtitle">{{ .titleSub }}</small>
+    {{ if .title }}
+    <h1 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
+        {{ if .titleSub }}
+        <br><small class="m-section__subtitle">{{ .titleSub }}</small>
+        {{ end }}
+    </h1>
     {{ end }}
-</h1>
 {{ end }}
 
 {{ if eq $titleLayout 2 }}
-{{ if .title }}
-<h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}<br>{{ end }}
-    {{ if .titleSub }}
-    <small class="m-section__subtitle">{{ .titleSub }}</small>
+    {{ if .title }}
+        <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
+            {{ if .titleSub }}
+            <br><small class="m-section__subtitle">{{ .titleSub }}</small>
+            {{ end }}
+        </h2>
     {{ end }}
-</h2>
 {{ end }}
 
 {{ if eq $titleLayout 3 }}
-{{ if .title }}
-<h3 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}<br>{{ end }}
-    {{ if .titleSub }}
-    <small class="m-section__subtitle">{{ .titleSub }}</small>
+    {{ if .title }}
+    <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
+        {{ if .titleSub }}
+        <br><small class="m-section__subtitle">{{ .titleSub }}</small>
+        {{ end }}
+    </h2>
     {{ end }}
-</h3>
 {{ end }}
 
 {{ if eq $titleLayout 4 }}
-{{ if .title }}
-<h4 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}<br>{{ end }}
-    {{ if .titleSub }}
-    <small class="m-section__subtitle">{{ .titleSub }}</small>
+    {{ if .title }}
+    <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
+        {{ if .titleSub }}
+        <br><small class="m-section__subtitle">{{ .titleSub }}</small>
+        {{ end }}
+    </h2>
     {{ end }}
-</h4>
 {{ end }}
 
 {{ if eq $titleLayout 5 }}
-{{ if .title }}
-<h5 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}<br>{{ end }}
-    {{ if .titleSub }}
-    <small class="m-section__subtitle">{{ .titleSub }}</small>
+    {{ if .title }}
+    <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
+        {{ if .titleSub }}
+        <br><small class="m-section__subtitle">{{ .titleSub }}</small>
+        {{ end }}
+    </h2>
     {{ end }}
-</h5>
 {{ end }}
 
 {{ if eq $titleLayout 6 }}
-{{ if .title }}
-<h6 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}<br>{{ end }}
-    {{ if .titleSub }}
-    <small class="m-section__subtitle">{{ .titleSub }}</small>
+    {{ if .title }}
+    <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
+        {{ if .titleSub }}
+        <br><small class="m-section__subtitle">{{ .titleSub }}</small>
+        {{ end }}
+    </h2>
     {{ end }}
-</h6>
 {{ end }}

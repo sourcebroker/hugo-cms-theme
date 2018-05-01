@@ -7,6 +7,7 @@ dev-master
 1) [TASK] Remove inclusion of partial as all partials are anyway read at start of hugo.
 2) [TASK] Refactor content elements by removing "with" and allowing all variables to be available inside content element
   scope.
+3) [TASK] Refactor of ce--section-header
 
 0.0.7
 ~~~~~
