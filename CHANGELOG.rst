@@ -9,6 +9,7 @@ dev-master
   scope.
 3) [TASK] Refactor of ce--section-header
 4) [TASK] Add image processing options to general config and /resources folder to .gitignore.
+5) [TASK] Add media storage. Configuring card element for using media.
 
 0.0.7
 ~~~~~
