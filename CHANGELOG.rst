@@ -2,8 +2,8 @@
 Changelog
 ---------
 
-dev-master
-~~~~~~~~~~
+0.0.8
+~~~~~
 1) [TASK] Remove inclusion of partial as all partials are anyway read at start of hugo.
 2) [TASK] Refactor content elements by removing "with" and allowing all variables to be available inside content element
   scope.
