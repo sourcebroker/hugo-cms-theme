@@ -1,12 +1,19 @@
 {{ define "ce-card" }}
-{{ with $.Scratch.Get "ceData" }}
-<div class="card" >
-    <div class="card-body">
-        <h5 class="card-title">{{ .cardTitle }}</h5>
-        <p class="card-text">{{ .cardText }}</p>
-        <a href="{{ .cardButtonLink }}" class="btn btn-primary">{{ .cardButtonText }}</a>
+
+    {{ $ceData := $.Scratch.Get "ceData" }}
+    {{ $mediaStorage := .Site.GetPage "page" "media" }}
+
+    <div class="card" >
+        <div class="card-body">
+            {{ $cardImage := $mediaStorage.Resources.GetMatch (string $ceData.cardImage) }}
+            {{ with $cardImage.Fill "286x180" }}
+                <img class="card-img-top" src="{{ .Permalink }}" title="{{ .Params.title }}" width="{{ .Width }}" height="{{ .Height }}">
+            {{ end }}
+            <h5 class="card-title">{{ $ceData.cardTitle }}</h5>
+            <p class="card-text">{{ $ceData.cardText }}</p>
+            <a href="{{ $ceData.cardButtonLink }}" class="btn btn-primary">{{ $ceData.cardButtonText }}</a>
+        </div>
     </div>
-</div>
-{{ end }}
+
 {{ end }}
 {{ partial "ce--section" . }}

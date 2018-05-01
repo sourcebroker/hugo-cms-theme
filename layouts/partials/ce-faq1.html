@@ -1,17 +1,19 @@
 {{ define "ce-faq1" }}
-{{ with $.Scratch.Get "ceData" }}
-<div class="m-faq1">
-    <div class="m-list-separate m-list-separate--keep-bottom-sep">
-        <ul class="m-list-separate__list">
-            {{ range .questions }}
-            <li class="m-list-separate__list-item m-list-separate__list-item--space">
-                <h4 class="subtitle small-bmargin">{{ .question}}</h4>
-                {{ .answer | safeHTML}}
-            </li>
-            {{ end }}
-        </ul>
+
+    {{ $ceData := $.Scratch.Get "ceData" }}
+
+    <div class="m-faq1">
+        <div class="m-list-separate m-list-separate--keep-bottom-sep">
+            <ul class="m-list-separate__list">
+                {{ range $ceData.questions }}
+                <li class="m-list-separate__list-item m-list-separate__list-item--space">
+                    <h4 class="subtitle small-bmargin">{{ .question}}</h4>
+                    {{ .answer | safeHTML}}
+                </li>
+                {{ end }}
+            </ul>
+        </div>
     </div>
-</div>
-{{ end }}
+
 {{ end }}
 {{ partial "ce--section" . }}
