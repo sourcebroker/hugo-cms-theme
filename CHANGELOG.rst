@@ -8,6 +8,7 @@ dev-master
 2) [TASK] Refactor content elements by removing "with" and allowing all variables to be available inside content element
   scope.
 3) [TASK] Refactor of ce--section-header
+4) [TASK] Add image processing options to general config and /resources folder to .gitignore.
 
 0.0.7
 ~~~~~
