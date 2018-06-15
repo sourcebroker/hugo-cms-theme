@@ -6,12 +6,12 @@
         {{ $col0Classess := default "col-md-6" $ceData.columns.col0.classes }}
         <div class="{{ $col0Classess }}">
             {{ $.Scratch.Set "contentElements" (index $ceData.columns "col0").contentElements }}
-            {{ template "getColumnContent" . }}
+            {{ template "partials/ce--content-column.html" . }}
         </div>
         {{ $col1Classess := default "col-md-6" $ceData.columns.col1.classes }}
         <div class="{{ $col1Classess }}">
             {{ $.Scratch.Set "contentElements" (index $ceData.columns "col1").contentElements }}
-            {{ template "getColumnContent" . }}
+            {{ template "partials/ce--content-column.html" . }}
         </div>
     </div>
 
