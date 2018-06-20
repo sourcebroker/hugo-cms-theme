@@ -106,12 +106,12 @@ For content elements
 - **Multilang content support**
 
   Data can be multilang. The file name must then have the value of lang defined in "languages" part of Hugo config.
-  For example ``/data/content/1.yaml`` is default language and ``/data/contant/1.de.yaml`` is for german language.
+  For example ``/data/content/1.yaml`` is default language and ``/data/content/1.de.yaml`` is for german language.
 
 - **Multilang content fallback**
 
   There is content fallback for multilang content. For example if lang is DE and there is no file
-  ``/data/contant/1.de.yaml`` then content from ``/data/contant/1.yaml`` is taken as fallback.
+  ``/data/content/1.de.yaml`` then content from ``/data/content/1.yaml`` is taken as fallback.
 
 - **Content elements can be disabled/enabled (draft)**
 
