@@ -2,7 +2,7 @@
 Changelog
 ---------
 
-master
+0.1.0
 ~~~~~
 1) [TASK] Use partial file directly for "get-column-content".
 2) [TASK] Use partial as partial and not template.
