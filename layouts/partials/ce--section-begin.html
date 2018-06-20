@@ -1,0 +1,39 @@
+{{ $ceId := $.Scratch.Get "ceId" }}
+{{ $ceData := $.Scratch.Get "ceData" }}
+{{ $ceName := $.Scratch.Get "ceName" }}
+
+<div class="section ce-{{$ceId}} mt-0 mb-4 {{ $ceData.sectionClasses }}">
+
+    {{ $titleLayout := default 1 $ceData.titleLayout }}
+
+    {{ if eq $titleLayout 1 }}
+        {{ if $ceData.title }}
+        <h1 class="m-section__title {{ if $ceData.titleClasses }} {{ $ceData.titleClasses }} {{ end }}">{{ $ceData.title }}
+            {{ if $ceData.titleSub }}
+            <br><small class="m-section__subtitle">{{ $ceData.titleSub }}</small>
+            {{ end }}
+        </h1>
+        {{ end }}
+    {{ end }}
+
+    {{ if eq $titleLayout 2 }}
+        {{ if $ceData.title }}
+        <h2 class="m-section__title {{ if $ceData.titleClasses }} {{ $ceData.titleClasses }} {{ end }}">{{ $ceData.title }}
+            {{ if $ceData.titleSub }}
+            <br><small class="m-section__subtitle">{{ $ceData.titleSub }}</small>
+            {{ end }}
+        </h2>
+        {{ end }}
+    {{ end }}
+
+    {{ if eq $titleLayout 3 }}
+        {{ if $ceData.title }}
+        <h3 class="m-section__title {{ if $ceData.titleClasses }} {{ $ceData.titleClasses }} {{ end }}">{{ $ceData.title }}
+            {{ if $ceData.titleSub }}
+            <br><small class="m-section__subtitle">{{ $ceData.titleSub }}</small>
+            {{ end }}
+        </h3>
+        {{ end }}
+    {{ end }}
+
+{{/* The closing tag is in "ce--section-end.html" */}}

@@ -6,8 +6,9 @@ master
 ~~~~~
 1) [TASK] Use partial file directly for "get-column-content".
 2) [TASK] Use partial as partial and not template.
-3) [TASK] Cleanup on "ce--section-header.html"
+3) [TASK] Cleanup on "ce--section-header.html".
 4) [DOCS] Docs update.
+5) [TASK] Remove the templates in favour of partials. No more need to declare new CE "ce--section".
 
 0.0.9
 ~~~~~

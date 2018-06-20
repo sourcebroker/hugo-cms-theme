@@ -1,8 +1,7 @@
-{{ define "ce-card" }}
+{{ $ceData := $.Scratch.Get "ceData" }}
+{{ $mediaStorage := .Site.GetPage "page" "_media" }}
 
-    {{ $ceData := $.Scratch.Get "ceData" }}
-    {{ $mediaStorage := .Site.GetPage "page" "_media" }}
-
+{{ partial "ce--section-begin" . }}
     <div class="card" >
         <div class="card-body">
             {{ $cardImage := $mediaStorage.Resources.GetMatch (string $ceData.cardImage) }}
@@ -14,6 +13,5 @@
             <a href="{{ $ceData.cardButtonLink }}" class="btn btn-primary">{{ $ceData.cardButtonText }}</a>
         </div>
     </div>
+{{ partial "ce--section-end" }}
 
-{{ end }}
-{{ partial "ce--section" . }}

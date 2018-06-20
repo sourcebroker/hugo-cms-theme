@@ -1,7 +1,6 @@
-{{ define "ce-faq1" }}
+{{ $ceData := $.Scratch.Get "ceData" }}
 
-    {{ $ceData := $.Scratch.Get "ceData" }}
-
+{{ partial "ce--section-begin" . }}
     <div class="m-faq1">
         <div class="m-list-separate m-list-separate--keep-bottom-sep">
             <ul class="m-list-separate__list">
@@ -14,6 +13,4 @@
             </ul>
         </div>
     </div>
-
-{{ end }}
-{{ partial "ce--section" . }}
+{{ partial "ce--section-end" }}

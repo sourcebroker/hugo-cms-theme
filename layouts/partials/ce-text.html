@@ -1,8 +1,6 @@
-{{ define "ce-text" }}
+{{ partial "ce--section-begin" . }}
 
     {{ $ceData := $.Scratch.Get "ceData" }}
-
     {{ $ceData.text | safeHTML }}
 
-{{ end }}
-{{ partial "ce--section" . }}
+{{ partial "ce--section-end" }}

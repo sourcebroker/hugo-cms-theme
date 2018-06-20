@@ -1,7 +1,6 @@
-{{ define "ce-grid2col" }}
+{{ $ceData := .Scratch.Get "ceData" }}
 
-    {{ $ceData := .Scratch.Get "ceData" }}
-
+{{ partial "ce--section-begin" . }}
     <div class="row">
         {{ $col0Classess := default "col-md-6" $ceData.columns.col0.classes }}
         <div class="{{ $col0Classess }}">
@@ -14,6 +13,4 @@
             {{ partial "ce--content-column" . }}
         </div>
     </div>
-
-{{ end }}
-{{ partial "ce--section" . }}
+{{ partial "ce--section-end" }}
