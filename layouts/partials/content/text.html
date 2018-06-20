@@ -1,0 +1,6 @@
+{{ partial "content/helpers/section-begin" . }}
+
+    {{ $ceData := $.Scratch.Get "ceData" }}
+    {{ $ceData.text | safeHTML }}
+
+{{ partial "content/helpers/section-end" }}

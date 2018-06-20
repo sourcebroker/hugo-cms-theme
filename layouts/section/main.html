@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col">
             {{ $.Scratch.Set "contentElements" (index .Params.columns "col0") }}
-            {{ partial "ce--content-column" . }}
+            {{ partial "content/helpers/content-column" . }}
         </div>
     </div>
 </div>

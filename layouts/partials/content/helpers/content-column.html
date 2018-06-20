@@ -4,7 +4,7 @@
         {{ $potencialLanguageIndex := printf "%s%s" $ceId (cond (eq $.Lang "en") "" (printf ".%s" $.Lang)) }}
         {{ $index := cond (fileExists (printf "data/content/%s.yaml" $potencialLanguageIndex)) $potencialLanguageIndex (cond (fileExists (printf "data/content/%s.yaml" $ceId)) $ceId nil) }}
         {{ if eq $index nil }}
-                {{ partial "ce--data-file-not-found" $ceId }}
+                {{ partial "content/helpers/data-file-not-found" $ceId }}
             {{ else }}
                 {{ $ceData := index $.Site.Data.content $index }}
                 {{ $publishDate := time (default "1000-01-01T00:00:00Z" $ceData.publishDate) }}
@@ -16,12 +16,12 @@
                     {{ $ceIdTmp := $.Scratch.Get "ceId" }}
                     {{ $contentElementsTmp := $.Scratch.Get "contentElements" }}
 
-                    {{ $ceName := (printf "ce-%s" $ceData.type) }}
+                    {{ $ceName := $ceData.type }}
                     {{ $.Scratch.Set "ceData" $ceData }}
                     {{ $.Scratch.Set "ceName" $ceName }}
                     {{ $.Scratch.Set "ceId" $ceId }}
 
-                    {{ partial $ceName $pipe }}
+                    {{ partial (printf "content/%s" $ceName) $pipe }}
 
                     {{ $.Scratch.Set "ceData" $ceDataTmp }}
                     {{ $.Scratch.Set "ceName" $ceNameTmp }}

@@ -1,16 +1,16 @@
 {{ $ceData := .Scratch.Get "ceData" }}
 
-{{ partial "ce--section-begin" . }}
+{{ partial "content/helpers/section-begin" . }}
     <div class="row">
         {{ $col0Classess := default "col-md-6" $ceData.columns.col0.classes }}
         <div class="{{ $col0Classess }}">
             {{ $.Scratch.Set "contentElements" (index $ceData.columns "col0").contentElements }}
-            {{ partial "ce--content-column" . }}
+            {{ partial "content/helpers/content-column" . }}
         </div>
         {{ $col1Classess := default "col-md-6" $ceData.columns.col1.classes }}
         <div class="{{ $col1Classess }}">
             {{ $.Scratch.Set "contentElements" (index $ceData.columns "col1").contentElements }}
-            {{ partial "ce--content-column" . }}
+            {{ partial "content/helpers/content-column" . }}
         </div>
     </div>
-{{ partial "ce--section-end" }}
+{{ partial "content/helpers/section-end" }}
