@@ -6,6 +6,7 @@ master
 ~~~~~
 1) [TASK] Use partial file directly for "get-column-content".
 2) [TASK] Use partial as partial and not template.
+3) [TASK] Cleanup on "ce--section-header.html"
 
 0.0.9
 ~~~~~

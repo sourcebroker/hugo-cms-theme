@@ -12,50 +12,20 @@
 
 {{ if eq $titleLayout 2 }}
     {{ if .title }}
-        <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
-            {{ if .titleSub }}
-            <br><small class="m-section__subtitle">{{ .titleSub }}</small>
-            {{ end }}
-        </h2>
+    <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
+        {{ if .titleSub }}
+        <br><small class="m-section__subtitle">{{ .titleSub }}</small>
+        {{ end }}
+    </h2>
     {{ end }}
 {{ end }}
 
 {{ if eq $titleLayout 3 }}
     {{ if .title }}
-    <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
+    <h3 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
         {{ if .titleSub }}
         <br><small class="m-section__subtitle">{{ .titleSub }}</small>
         {{ end }}
-    </h2>
-    {{ end }}
-{{ end }}
-
-{{ if eq $titleLayout 4 }}
-    {{ if .title }}
-    <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
-        {{ if .titleSub }}
-        <br><small class="m-section__subtitle">{{ .titleSub }}</small>
-        {{ end }}
-    </h2>
-    {{ end }}
-{{ end }}
-
-{{ if eq $titleLayout 5 }}
-    {{ if .title }}
-    <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
-        {{ if .titleSub }}
-        <br><small class="m-section__subtitle">{{ .titleSub }}</small>
-        {{ end }}
-    </h2>
-    {{ end }}
-{{ end }}
-
-{{ if eq $titleLayout 6 }}
-    {{ if .title }}
-    <h2 class="m-section__title {{ if .titleClasses }} {{ .titleClasses }} {{ end }}">{{ .title }}
-        {{ if .titleSub }}
-        <br><small class="m-section__subtitle">{{ .titleSub }}</small>
-        {{ end }}
-    </h2>
+    </h3>
     {{ end }}
 {{ end }}
