@@ -2,11 +2,14 @@
 Changelog
 ---------
 
+0.3.0
+~~~~~
+1) [TASK] Make package to fit content based CMSes - not only TYPO3.
+
 0.2.0
 ~~~~~
 1) [TASK] Refactor folder organisation.
 1) [TASK] Make some "blocks" in baseof in order to overwrite part of pages in section.
-
 
 0.1.0
 ~~~~~

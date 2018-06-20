@@ -1,19 +1,16 @@
-hugo-typo3-theme
-================
+hugo-cms-theme
+==============
 
 .. contents:: :local:
 
 What does it do?
 ----------------
 
-This is proof of concept for having Hugo (gohugo.io) working with TYPO3 (typo3.org) as backend. That means no fronted
-possibilities of TYPO3 will be used except maybe JSON API.
+This is proof of concept for having Hugo (gohugo.io) working as frontend renderer for any content element based CMSes
+as TYPO3, Drupal for example. The CMS acts then only as backend or JSON API data provider.
 
-This is only Hugo theme. If you want to test it with TYPO3 you need ext:hugo here https://github.com/sourcebroker/hugo
-
-This theme and ext:hugo are in early beta - so be patient with bugs!
-
-Any help to improve the code appreciated.
+This is only Hugo theme. If you want to test it with real CMS then the only real working exporter at this time is exporter
+for TYPO3. You can find it here https://github.com/sourcebroker/hugo
 
 
 Why someone would need that ?
@@ -24,30 +21,32 @@ Several reasons:
 - **Less time to implement**
 
   Today "well done" clickdummies are almost working websites. For small websites the time needed to implement clickdummy
-  into TYPO3 can be huge compared to gains (which sometimes is simple editing only). Therefore one can consider to use
-  TYPO3 as backend only for editing content. This content then will be written to files used by Hugo to generate website.
-  If for some reason the website will go complicated in future and Hugo will be not able to handle that complex case
-  then there is always fallback to implement frontend rendering in TYPO3.
+  into TYPO3, Drupal or whatever other content element based CMS can be huge compared to gains. Therefore one can consider
+  to prepare clickdummy using this package and use backend of CMS only for editing content which will be then exported
+  to Hugo files which will generate complete website. If for some reason the website will go too complicated in future
+  and Hugo will be not able to handle that complex case then there is always fallback to implement frontend rendering in
+  CMS as the content is already prepared in backend of that CMS.
 
 - **Security**
 
-  Hugo serves only static pages and if there will be no JSON API served by TYPO3 then TYPO3 can be fully hidden
+  Hugo serves only static pages and if there will be no JSON API served by CMS then this CMS can be fully hidden
   and accessed only by dedicated IP.
 
 - **Speed**
 
   Compare following. Hugo can render 1000 pages in 1 seconds and they are static - means no more pressure on
-  server and extremely fast TTFB (30-60ms). TYPO3 average is like render 0,5 to 4 pages in 1 second. Then they are in cache
-  and served with average TTFB 120ms-200ms. One can argue that there is ext:nc_staticfilecache which can serve TYPO3 generated
-  pages as static html. This is true but first those pages must be rendered by TYPO3 with average like 0,5 to 4 pages in
-  1 second. Imagine now you have TYPO3 website with 10.000 pages and you must clear cache often for whatever reason...
+  server and extremely fast TTFB (30-60ms). Average for CMSes is like render 0,5 to 4 pages in 1 second. Then the pages
+  are in cache and served with average TTFB 120ms-200ms. One can argue that CMSes are able also to generate static html.
+  This is true but first those pages must be rendered with average like 0,5 to 4 pages in 1 second. Imagine now you have
+  website with 10.000 pages and you must clear cache often for whatever reason.
 
 - **Content element based clickdummy pattern**
 
-  Sometimes its hard to explain to external frontend developers what means to build clickdummy the "TYPO3 way" so with
-  well-thought-out layouts and content elements (which share common classes for modification). This Hugo based clickdummy
-  reflects the logic behind TYPO3 layouts and reusable content elements. So even if you still want to implement frontend
-  with TYPO3 this clickdummy can help you to prepare clickdummy that will be easily implemented into TYPO3.
+  Sometimes its hard to explain to external frontend developers what means to build clickdummy with universal layouts
+  and content elements (which share common classes for modification). This Hugo based clickdummy reflects the logic
+  behind content element based CMSes (general layouts and reusable content elements). So even if you still want to
+  implement frontend with CMS then this package can help you to prepare clickdummy the way which can be easily implemented.
+
 
 Installation
 ------------
@@ -55,12 +54,13 @@ Installation
 1) Clone package:
    ::
 
-      git clone https://github.com/sourcebroker/hugo-typo3.git
+      git clone https://github.com/sourcebroker/hugo-cms-theme.git
 
 2) Run:
    ::
 
       hugo server
+
 
 What is working already?
 -------------------------
@@ -68,15 +68,15 @@ What is working already?
 For pages
 +++++++++
 
-- **Equivalent of backend_layouts**
+- **Equivalent of layouts**
 
-  "Sections" in Hugo are used as equivalent of "backend_layouts" in TYPO3.
+  "Sections" in this Hugo theme are used as equivalent of "layouts" in CMSes.
 
 - **Content elements rendering**
 
-  What is to be rendered on page is defined in front matter as "col_x" where x is the id of column defined in
-  "backend_layout". The "col_x" should have array of tt_content uids. The minimal example front matter for showing content
-  would be then (YAML format):
+  What is to be rendered on page is defined in front matter as "colx" where x is the id of column defined in
+  "layout" of CMS. The "colx" should have array of content element id's. The minimal example front matter for showing
+  content would be then (YAML format):
 
   ::
 
@@ -95,18 +95,17 @@ For pages
 For content elements
 ++++++++++++++++++++
 
-- **Content elements templates as partials at /partials/ce-**
+- **Content elements as partials in /partials/content/**
 
-  Templates of content elements as defined as partials. For example: ``/layouts/partials/ce-faq2.html``
+  Templates of content elements are defined as partials. For example: ``/layouts/partials/content/faq.html``
 
 - **Content elements data in /data/content**
 
-  Data to render content element are kept in ``/data/content/x.yaml`` where x is equal to uid of content element in TYPO3.
-  You can consider this folder as equivalent of "tt_content" table form TYPO3.
+  Data to render content element are kept in ``/data/content/x.yaml`` where x is equal to uid of content element.
 
 - **Multilang content support**
 
-  Data can be multilang. The file name must then have the value of lang defined in "languages" part of hugo config.
+  Data can be multilang. The file name must then have the value of lang defined in "languages" part of Hugo config.
   For example ``/data/content/1.yaml`` is default language and ``/data/contant/1.de.yaml`` is for german language.
 
 - **Multilang content fallback**
@@ -116,14 +115,12 @@ For content elements
 
 - **Content elements can be disabled/enabled (draft)**
 
-  There is support for enable/disable single content element. In TYPO3 there is "hidden" field for that. Here the field
-  for that in data of content element is "draft" (which is analogy for "draft" from front matter of page in Hugo)
+  There is support for enable/disable single content element. As analogy to Hugo page its also called "draft".
 
 - **Content elements can be disabled/enabled according to date (publishDate, expireDate)**
 
-  There is support for enable/disable single content element according to time. In TYPO3 there is "starttime" and
-  "endtime" fields for that. Here for the analogy to existing front matter values for page the names for the fields
-  are "publishDate", "expireDate".
+  There is support for enable/disable single content element according to time. As analogy to Hugo page its called
+  "publishDate", "expireDate".
 
 - **Content elements can be put into grid / columns**
 
@@ -137,7 +134,7 @@ For content elements
   ``/content/_media/storage01``, etc. Each file from CMS storage must be reflected in ``content/_media/index.md``
   and have following structure.
 
-   ::
+  ::
 
     ---
     resources:
@@ -155,11 +152,11 @@ For content elements
 
    The "name" should be some identifier (id) of media resource from CMS. In content element file the media file then
    must be reflected by this identifier. Look for example in ``data/content/20.yaml`` and example of media file usage and
-   resizing in ``layouts/partials/ce-card.html``.
+   resizing in ``layouts/partials/content/card.html``.
 
 
 NOTE
-++++
+----
 
 For translations of the url the "url" option in front matter is used because slug is not working for page sections.
 Read here for more explanation: https://discourse.gohugo.io/t/multilingual-url-slug-is-being-ignored/10003
