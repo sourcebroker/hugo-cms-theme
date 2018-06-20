@@ -6,10 +6,10 @@ hugo-typo3-theme
 What does it do?
 ----------------
 
-This is proof of concept for having HUGO (gohugo.io) working with TYPO3 (typo3.org) as backend. That means no fronted
+This is proof of concept for having Hugo (gohugo.io) working with TYPO3 (typo3.org) as backend. That means no fronted
 possibilities of TYPO3 will be used except maybe JSON API.
 
-This is only HUGO theme. If you want to test it with TYPO3 you need ext:hugo here https://github.com/sourcebroker/hugo
+This is only Hugo theme. If you want to test it with TYPO3 you need ext:hugo here https://github.com/sourcebroker/hugo
 
 This theme and ext:hugo are in early beta - so be patient with bugs!
 
@@ -25,13 +25,13 @@ Several reasons:
 
   Today "well done" clickdummies are almost working websites. For small websites the time needed to implement clickdummy
   into TYPO3 can be huge compared to gains (which sometimes is simple editing only). Therefore one can consider to use
-  TYPO3 as backend only for editing content. This content then will be written to files used by HUGO to generate website.
-  If for some reason the website will go complicated in future and HUGO will be not able to handle that complex case
+  TYPO3 as backend only for editing content. This content then will be written to files used by Hugo to generate website.
+  If for some reason the website will go complicated in future and Hugo will be not able to handle that complex case
   then there is always fallback to implement frontend rendering in TYPO3.
 
 - **Security**
 
-  HUGO serves only static pages and if there will be no JSON API served by TYPO3 then TYPO3 can be fully hidden
+  Hugo serves only static pages and if there will be no JSON API served by TYPO3 then TYPO3 can be fully hidden
   and accessed only by dedicated IP.
 
 - **Speed**
@@ -45,7 +45,7 @@ Several reasons:
 - **Content element based clickdummy pattern**
 
   Sometimes its hard to explain to external frontend developers what means to build clickdummy the "TYPO3 way" so with
-  well-thought-out layouts and content elements (which share common classes for modification). This hugo based clickdummy
+  well-thought-out layouts and content elements (which share common classes for modification). This Hugo based clickdummy
   reflects the logic behind TYPO3 layouts and reusable content elements. So even if you still want to implement frontend
   with TYPO3 this clickdummy can help you to prepare clickdummy that will be easily implemented into TYPO3.
 
@@ -70,7 +70,7 @@ For pages
 
 - **Equivalent of backend_layouts**
 
-  "Sections" in HUGO are used as equivalent of "backend_layouts" in TYPO3.
+  "Sections" in Hugo are used as equivalent of "backend_layouts" in TYPO3.
 
 - **Content elements rendering**
 
@@ -95,13 +95,13 @@ For pages
 For content elements
 ++++++++++++++++++++
 
-- **Content elements templates as partials at /partials/content-**
+- **Content elements templates as partials at /partials/ce-**
 
-  Templates of content elements as defined as partials. For example: ``/layouts/partials/content-faq2.html``
+  Templates of content elements as defined as partials. For example: ``/layouts/partials/ce-faq2.html``
 
 - **Content elements data in /data/content**
 
-  Data to render content element are kept in ``/data/contant/x.yaml`` where x is equal to uid of content element in TYPO3.
+  Data to render content element are kept in ``/data/content/x.yaml`` where x is equal to uid of content element in TYPO3.
   You can consider this folder as equivalent of "tt_content" table form TYPO3.
 
 - **Multilang content support**
@@ -117,7 +117,7 @@ For content elements
 - **Content elements can be disabled/enabled (draft)**
 
   There is support for enable/disable single content element. In TYPO3 there is "hidden" field for that. Here the field
-  for that in data of content element is "draft" (which is analogy for "draft" from front matter of page in HUGO)
+  for that in data of content element is "draft" (which is analogy for "draft" from front matter of page in Hugo)
 
 - **Content elements can be disabled/enabled according to date (publishDate, expireDate)**
 
