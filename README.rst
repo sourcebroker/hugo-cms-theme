@@ -54,7 +54,7 @@ Installation
 1) Clone package:
    ::
 
-      git clone https://github.com/sourcebroker/hugo-cms-theme.git
+      git clone https://github.com/sourcebroker/hugo-cms-theme.git .
 
 2) Run:
    ::
@@ -71,6 +71,14 @@ For pages
 - **Equivalent of layouts**
 
   "Sections" in this Hugo theme are used as equivalent of "layouts" in CMSes.
+
+  ::
+
+  layouts
+   |-section
+     |- main.html
+     |- main-sidebar-right.html
+     |- main-sidebar-left.html
 
 - **Content elements rendering**
 
