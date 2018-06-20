@@ -74,11 +74,11 @@ For pages
 
   ::
 
-  layouts
-   |-section
-     |- main.html
-     |- main-sidebar-right.html
-     |- main-sidebar-left.html
+    layouts
+     |-section
+       |- main.html
+       |- main-sidebar-right.html
+       |- main-sidebar-left.html
 
 - **Content elements rendering**
 
