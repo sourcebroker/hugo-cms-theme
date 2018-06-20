@@ -150,9 +150,9 @@ For content elements
           alt: "Hugo banner"
     ---
 
-   The "name" should be some identifier (id) of media resource from CMS. In content element file the media file then
-   must be reflected by this identifier. Look for example in ``data/content/20.yaml`` and example of media file usage and
-   resizing in ``layouts/partials/content/card.html``.
+  The "name" should be some identifier (id) of media resource from CMS. In content element file the media file then
+  must be reflected by this identifier. Look for example in ``data/content/20.yaml`` and example of media file usage and
+  resizing in ``layouts/partials/content/card.html``.
 
 
 NOTE
